@@ -1,6 +1,6 @@
 ﻿namespace Rent_A_Car
 {
-    partial class UserAuthForm
+    partial class ClientAuthForm
     {
         /// <summary>
         /// Required designer variable.
@@ -34,6 +34,7 @@
             passwordTB = new TextBox();
             signUpLabel = new Label();
             logInBtn = new Button();
+            backBtn = new Button();
             SuspendLayout();
             // 
             // label1
@@ -88,11 +89,22 @@
             logInBtn.UseVisualStyleBackColor = true;
             logInBtn.Click += logInBtn_Click;
             // 
+            // backBtn
+            // 
+            backBtn.Location = new Point(12, 724);
+            backBtn.Name = "backBtn";
+            backBtn.Size = new Size(94, 29);
+            backBtn.TabIndex = 6;
+            backBtn.Text = "Back";
+            backBtn.UseVisualStyleBackColor = true;
+            backBtn.Click += backBtn_Click;
+            // 
             // UserAuthForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1200, 800);
+            Controls.Add(backBtn);
             Controls.Add(logInBtn);
             Controls.Add(signUpLabel);
             Controls.Add(passwordTB);
@@ -107,6 +119,7 @@
             Controls.SetChildIndex(passwordTB, 0);
             Controls.SetChildIndex(signUpLabel, 0);
             Controls.SetChildIndex(logInBtn, 0);
+            Controls.SetChildIndex(backBtn, 0);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -119,5 +132,6 @@
         private TextBox passwordTB;
         private Label signUpLabel;
         private Button logInBtn;
+        private Button backBtn;
     }
 }

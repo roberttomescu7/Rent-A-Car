@@ -19,15 +19,14 @@ namespace Rent_A_Car
 
         private void clientBtn_Click(object sender, EventArgs e)
         {
-            UserAuthForm userAuthPage = new UserAuthForm();
+            ClientAuthForm userAuthPage = new ClientAuthForm(this);
             userAuthPage.Show();
             this.Hide();
-            this.Close();
         }
 
         private void employeeBtn_Click(object sender, EventArgs e)
         {
-            EmployeeAuthForm employeeAuthPage = new EmployeeAuthForm();
+            EmployeeAuthForm employeeAuthPage = new EmployeeAuthForm(this);
             employeeAuthPage.Show();
             this.Hide();
         }

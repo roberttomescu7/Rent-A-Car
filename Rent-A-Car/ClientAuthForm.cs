@@ -12,10 +12,13 @@ using System.Windows.Forms;
 
 namespace Rent_A_Car
 {
-    public partial class UserAuthForm : MainForm
+    public partial class ClientAuthForm : MainForm
     {
-        public UserAuthForm()
+        private Form _backForm;
+
+        public ClientAuthForm(Form backForm)
         {
+            _backForm = backForm;
             InitializeComponent();
         }
 
@@ -29,7 +32,7 @@ namespace Rent_A_Car
         private void logInBtn_Click(object sender, EventArgs e)
         {
             String username = usernameTB.Text;
-            String password = passwordTB.Text;
+            String password = MainForm.ComputeSha256Hash(passwordTB.Text).Substring(0,50);
 
             try
             {
@@ -40,13 +43,13 @@ namespace Rent_A_Car
                 DataTable result = new DataTable();
                 adapter.Fill(result);
 
-                if(result.Rows.Count > 0)
+                if (result.Rows.Count > 0)
                 {
-                    UserInterfaceForm userInterfacePage = new UserInterfaceForm();
+                    ClientInterfaceForm userInterfacePage = new ClientInterfaceForm();
                     userInterfacePage.Show();
                     this.Close();
-                } 
-                else 
+                }
+                else
                 {
                     MessageBox.Show("Incorrect username or password", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     usernameTB.Clear();
@@ -58,6 +61,12 @@ namespace Rent_A_Car
             {
                 MessageBox.Show("Inaccesible database", "ERROR");
             }
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            _backForm.Show();
+            this.Close();
         }
     }
 }
