@@ -24,7 +24,7 @@ namespace Rent_A_Car
         private void logInBtn_Click(object sender, EventArgs e)
         {
             String username = usernameTB.Text;
-            String password = MainForm.ComputeSha256Hash(passwordTB.Text).Substring(0,50);
+            String password = MainForm.ComputeSha256Hash(passwordTB.Text).Substring(0, 50);
 
             try
             {

@@ -15,7 +15,8 @@ namespace Rent_A_Car
         public MainMenuForm()
         {
             InitializeComponent();
-        }  
+            backBtn.Hide();
+        }
 
         private void clientBtn_Click(object sender, EventArgs e)
         {
