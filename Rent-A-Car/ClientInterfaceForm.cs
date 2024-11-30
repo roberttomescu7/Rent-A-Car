@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Rent_A_Car
 {
-    public partial class MainMenu : Form
+    public partial class ClientInterfaceForm : MainForm
     {
-        public MainMenu()
+        public ClientInterfaceForm()
         {
             InitializeComponent();
         }
