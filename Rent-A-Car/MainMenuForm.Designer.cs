@@ -30,27 +30,64 @@
         {
             clientBtn = new Button();
             employeeBtn = new Button();
+            pictureBox1 = new PictureBox();
+            panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
+            // 
+            // panel2
+            // 
+            panel2.Controls.Add(clientBtn);
+            panel2.Controls.Add(employeeBtn);
+            panel2.Controls.SetChildIndex(employeeBtn, 0);
+            panel2.Controls.SetChildIndex(clientBtn, 0);
             // 
             // clientBtn
             // 
-            clientBtn.Location = new Point(516, 249);
+            clientBtn.BackColor = Color.FromArgb(74, 202, 205);
+            clientBtn.FlatAppearance.BorderColor = Color.FromArgb(74, 202, 205);
+            clientBtn.FlatAppearance.BorderSize = 0;
+            clientBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(201, 239, 240);
+            clientBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(201, 239, 240);
+            clientBtn.FlatStyle = FlatStyle.Flat;
+            clientBtn.Font = new Font("Impact", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            clientBtn.Location = new Point(0, 0);
+            clientBtn.Margin = new Padding(0);
             clientBtn.Name = "clientBtn";
-            clientBtn.Size = new Size(94, 29);
+            clientBtn.Size = new Size(250, 50);
             clientBtn.TabIndex = 0;
             clientBtn.Text = "Client";
-            clientBtn.UseVisualStyleBackColor = true;
+            clientBtn.UseVisualStyleBackColor = false;
             clientBtn.Click += clientBtn_Click;
             // 
             // employeeBtn
             // 
-            employeeBtn.Location = new Point(516, 314);
+            employeeBtn.BackColor = Color.FromArgb(74, 202, 205);
+            employeeBtn.FlatAppearance.BorderColor = Color.FromArgb(74, 202, 205);
+            employeeBtn.FlatAppearance.BorderSize = 0;
+            employeeBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(201, 239, 240);
+            employeeBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(201, 239, 240);
+            employeeBtn.FlatStyle = FlatStyle.Flat;
+            employeeBtn.Font = new Font("Impact", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            employeeBtn.Location = new Point(0, 50);
+            employeeBtn.Margin = new Padding(0);
             employeeBtn.Name = "employeeBtn";
-            employeeBtn.Size = new Size(94, 29);
+            employeeBtn.Size = new Size(250, 50);
             employeeBtn.TabIndex = 1;
             employeeBtn.Text = "Angajat";
-            employeeBtn.UseVisualStyleBackColor = true;
+            employeeBtn.UseVisualStyleBackColor = false;
             employeeBtn.Click += employeeBtn_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.car;
+            pictureBox1.Location = new Point(579, 267);
+            pictureBox1.Margin = new Padding(0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(300, 300);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 3;
+            pictureBox1.TabStop = false;
             // 
             // MainMenuForm
             // 
@@ -58,12 +95,13 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoValidate = AutoValidate.EnablePreventFocusChange;
             ClientSize = new Size(1200, 800);
-            Controls.Add(employeeBtn);
-            Controls.Add(clientBtn);
-            FormBorderStyle = FormBorderStyle.None;
+            Controls.Add(pictureBox1);
             Name = "MainMenuForm";
-            StartPosition = FormStartPosition.CenterScreen;
             Text = "MainMenu";
+            Controls.SetChildIndex(panel2, 0);
+            Controls.SetChildIndex(pictureBox1, 0);
+            panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -71,5 +109,6 @@
 
         private Button clientBtn;
         private Button employeeBtn;
+        private PictureBox pictureBox1;
     }
 }

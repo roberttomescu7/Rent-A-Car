@@ -21,11 +21,6 @@ namespace Rent_A_Car
 
         public static SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-SR874JP\SQLEXPRESS;Initial Catalog=RentACar;Integrated Security=True");
 
-        private void exitBtn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         public static string ComputeSha256Hash(string rawData)
         {
             using (SHA256 sha256Hash = SHA256.Create())
@@ -39,6 +34,11 @@ namespace Rent_A_Car
                 }
                 return builder.ToString();
             }
+        }
+
+        private void exitBtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
