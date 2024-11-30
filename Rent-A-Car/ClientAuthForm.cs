@@ -24,15 +24,15 @@ namespace Rent_A_Car
 
         private void signUpLabel_Click(object sender, EventArgs e)
         {
-            SignUpForm signUpPage = new SignUpForm();
+            SignUpForm signUpPage = new SignUpForm(this);
             signUpPage.Show();
-            this.Close();
+            this.Hide();
         }
 
         private void logInBtn_Click(object sender, EventArgs e)
         {
             String username = usernameTB.Text;
-            String password = MainForm.ComputeSha256Hash(passwordTB.Text).Substring(0,50);
+            String password = MainForm.ComputeSha256Hash(passwordTB.Text);
 
             try
             {

@@ -52,6 +52,7 @@
             sexMCB = new CheckBox();
             sexFCB = new CheckBox();
             dateOfBirthDTP = new DateTimePicker();
+            backBtn = new Button();
             SuspendLayout();
             // 
             // sendBtn
@@ -260,10 +261,21 @@
             dateOfBirthDTP.Size = new Size(192, 27);
             dateOfBirthDTP.TabIndex = 26;
             // 
+            // backBtn
+            // 
+            backBtn.Location = new Point(12, 726);
+            backBtn.Name = "backBtn";
+            backBtn.Size = new Size(94, 29);
+            backBtn.TabIndex = 27;
+            backBtn.Text = "Back";
+            backBtn.UseVisualStyleBackColor = true;
+            backBtn.Click += backBtn_Click;
+            // 
             // SignUpForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             ClientSize = new Size(1200, 800);
+            Controls.Add(backBtn);
             Controls.Add(dateOfBirthDTP);
             Controls.Add(sexFCB);
             Controls.Add(sexMCB);
@@ -313,6 +325,7 @@
             Controls.SetChildIndex(sexMCB, 0);
             Controls.SetChildIndex(sexFCB, 0);
             Controls.SetChildIndex(dateOfBirthDTP, 0);
+            Controls.SetChildIndex(backBtn, 0);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -343,5 +356,6 @@
         private CheckBox sexMCB;
         private CheckBox sexFCB;
         private DateTimePicker dateOfBirthDTP;
+        private Button backBtn;
     }
 }

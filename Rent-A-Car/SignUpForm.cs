@@ -13,8 +13,12 @@ namespace Rent_A_Car
 {
     public partial class SignUpForm : MainForm
     {
-        public SignUpForm()
+
+        private Form _backForm;
+
+        public SignUpForm(Form backForm)
         {
+            _backForm = backForm;
             InitializeComponent();
         }
 
@@ -36,7 +40,7 @@ namespace Rent_A_Car
                 if (isUnique())
                 {
 
-                    string hashedPassword = (MainForm.ComputeSha256Hash(passwordTB.Text)).Substring(0, 50);
+                    string hashedPassword = (MainForm.ComputeSha256Hash(passwordTB.Text));
 
                     try
                     {
@@ -198,6 +202,12 @@ namespace Rent_A_Car
         private void passwordTB_TextChanged(object sender, EventArgs e)
         {
             passwordTB.BackColor = Color.White;
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            _backForm.Show();
+            this.Close();
         }
     }
 }
