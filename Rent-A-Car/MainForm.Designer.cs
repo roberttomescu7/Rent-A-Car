@@ -1,6 +1,6 @@
 ﻿namespace Rent_A_Car
 {
-    partial class MainMenu
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,48 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            panel1 = new Panel();
-            panel2 = new Panel();
+            exitBtn = new Button();
             SuspendLayout();
             // 
-            // panel1
+            // exitBtn
             // 
-            panel1.BackColor = Color.FromArgb(37, 101, 103);
-            panel1.Dock = DockStyle.Top;
-            panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(0);
-            panel1.Name = "panel1";
-            panel1.Size = new Size(1000, 50);
-            panel1.TabIndex = 0;
+            exitBtn.Location = new Point(12, 759);
+            exitBtn.Name = "exitBtn";
+            exitBtn.Size = new Size(94, 29);
+            exitBtn.TabIndex = 0;
+            exitBtn.Text = "Exit";
+            exitBtn.UseVisualStyleBackColor = true;
+            exitBtn.Click += exitBtn_Click;
             // 
-            // panel2
-            // 
-            panel2.BackColor = Color.FromArgb(74, 202, 205);
-            panel2.Dock = DockStyle.Left;
-            panel2.Location = new Point(0, 50);
-            panel2.Margin = new Padding(0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(250, 750);
-            panel2.TabIndex = 1;
-            // 
-            // MainMenu
+            // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.White;
-            ClientSize = new Size(1000, 800);
-            Controls.Add(panel2);
-            Controls.Add(panel1);
+            ClientSize = new Size(1200, 800);
+            Controls.Add(exitBtn);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "MainMenu";
+            Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "MainMenu";
+            Text = "MainForm";
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Panel panel1;
-        private Panel panel2;
+        private Button exitBtn;
     }
 }
