@@ -31,13 +31,13 @@ namespace Rent_A_Car
                 String querry = "SELECT * FROM Angajati " +
                             "WHERE Username = '" + username + "' AND Password = '" + password + "';";
 
-                SqlDataAdapter adapter = new SqlDataAdapter(querry, MainForm.conn);
+                SqlDataAdapter adapter = new SqlDataAdapter(querry, MainForm.Conn);
                 DataTable result = new DataTable();
                 adapter.Fill(result);
 
                 if (result.Rows.Count > 0)
                 {
-                    ClientInterfaceForm userInterfacePage = new ClientInterfaceForm();
+                    ClientInterfaceForm userInterfacePage = new ClientInterfaceForm(this);
                     userInterfacePage.Show();
                     this.Close();
                 }
@@ -53,12 +53,6 @@ namespace Rent_A_Car
             {
                 MessageBox.Show("Inaccesible database", "ERROR");
             }
-        }
-
-        private void backBtn_Click(object sender, EventArgs e)
-        {
-            _backForm.Show();
-            this.Close();
         }
     }
 }

@@ -65,9 +65,9 @@
             // 
             // sendBtn
             // 
-            sendBtn.Location = new Point(574, 726);
+            sendBtn.Location = new Point(690, 610);
             sendBtn.Name = "sendBtn";
-            sendBtn.Size = new Size(134, 29);
+            sendBtn.Size = new Size(192, 29);
             sendBtn.TabIndex = 1;
             sendBtn.Text = "Inregistreaza-te";
             sendBtn.UseVisualStyleBackColor = true;
@@ -76,7 +76,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(339, 130);
+            label1.Location = new Point(569, 131);
             label1.Name = "label1";
             label1.Size = new Size(55, 20);
             label1.TabIndex = 2;
@@ -85,7 +85,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(339, 171);
+            label2.Location = new Point(569, 172);
             label2.Name = "label2";
             label2.Size = new Size(73, 20);
             label2.TabIndex = 3;
@@ -94,7 +94,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(339, 209);
+            label3.Location = new Point(569, 210);
             label3.Name = "label3";
             label3.Size = new Size(43, 20);
             label3.TabIndex = 4;
@@ -103,7 +103,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(339, 249);
+            label4.Location = new Point(569, 250);
             label4.Name = "label4";
             label4.Size = new Size(52, 20);
             label4.TabIndex = 5;
@@ -112,7 +112,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(339, 293);
+            label5.Location = new Point(569, 294);
             label5.Name = "label5";
             label5.Size = new Size(54, 20);
             label5.TabIndex = 6;
@@ -121,7 +121,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(339, 331);
+            label6.Location = new Point(569, 332);
             label6.Name = "label6";
             label6.Size = new Size(39, 20);
             label6.TabIndex = 7;
@@ -130,7 +130,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(339, 375);
+            label7.Location = new Point(569, 376);
             label7.Name = "label7";
             label7.Size = new Size(44, 20);
             label7.TabIndex = 8;
@@ -139,7 +139,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(339, 415);
+            label8.Location = new Point(569, 416);
             label8.Name = "label8";
             label8.Size = new Size(32, 20);
             label8.TabIndex = 9;
@@ -148,7 +148,7 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(339, 453);
+            label9.Location = new Point(569, 454);
             label9.Name = "label9";
             label9.Size = new Size(93, 20);
             label9.TabIndex = 10;
@@ -157,7 +157,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(336, 491);
+            label10.Location = new Point(566, 492);
             label10.Name = "label10";
             label10.Size = new Size(118, 20);
             label10.TabIndex = 11;
@@ -166,7 +166,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(339, 532);
+            label11.Location = new Point(569, 533);
             label11.Name = "label11";
             label11.Size = new Size(56, 20);
             label11.TabIndex = 12;
@@ -174,76 +174,76 @@
             // 
             // usernameTB
             // 
-            usernameTB.Location = new Point(460, 488);
+            usernameTB.Location = new Point(690, 489);
             usernameTB.Name = "usernameTB";
-            usernameTB.Size = new Size(125, 27);
+            usernameTB.Size = new Size(192, 27);
             usernameTB.TabIndex = 13;
             usernameTB.TextChanged += usernameTB_TextChanged;
             // 
             // passwordTB
             // 
-            passwordTB.Location = new Point(460, 529);
+            passwordTB.Location = new Point(690, 530);
             passwordTB.Name = "passwordTB";
-            passwordTB.Size = new Size(125, 27);
+            passwordTB.Size = new Size(192, 27);
             passwordTB.TabIndex = 14;
             passwordTB.TextChanged += passwordTB_TextChanged;
             // 
             // numberTB
             // 
-            numberTB.Location = new Point(460, 290);
+            numberTB.Location = new Point(690, 291);
             numberTB.Name = "numberTB";
-            numberTB.Size = new Size(125, 27);
+            numberTB.Size = new Size(192, 27);
             numberTB.TabIndex = 20;
             // 
             // streetTB
             // 
-            streetTB.Location = new Point(460, 246);
+            streetTB.Location = new Point(690, 247);
             streetTB.Name = "streetTB";
-            streetTB.Size = new Size(125, 27);
+            streetTB.Size = new Size(192, 27);
             streetTB.TabIndex = 19;
             // 
             // countyTB
             // 
-            countyTB.Location = new Point(460, 372);
+            countyTB.Location = new Point(690, 373);
             countyTB.Name = "countyTB";
-            countyTB.Size = new Size(125, 27);
+            countyTB.Size = new Size(192, 27);
             countyTB.TabIndex = 18;
             // 
             // cityTB
             // 
-            cityTB.Location = new Point(460, 331);
+            cityTB.Location = new Point(690, 332);
             cityTB.Name = "cityTB";
-            cityTB.Size = new Size(125, 27);
+            cityTB.Size = new Size(192, 27);
             cityTB.TabIndex = 17;
             // 
             // firstNameTB
             // 
-            firstNameTB.Location = new Point(460, 168);
+            firstNameTB.Location = new Point(690, 169);
             firstNameTB.Name = "firstNameTB";
-            firstNameTB.Size = new Size(125, 27);
+            firstNameTB.Size = new Size(192, 27);
             firstNameTB.TabIndex = 23;
             firstNameTB.TextChanged += firstNameTB_TextChanged;
             // 
             // lastNameTB
             // 
-            lastNameTB.Location = new Point(460, 130);
+            lastNameTB.Location = new Point(690, 131);
             lastNameTB.Name = "lastNameTB";
-            lastNameTB.Size = new Size(125, 27);
+            lastNameTB.Size = new Size(192, 27);
             lastNameTB.TabIndex = 22;
             lastNameTB.TextChanged += lastNameTB_TextChanged;
             // 
             // cnpTB
             // 
-            cnpTB.Location = new Point(460, 206);
+            cnpTB.Location = new Point(690, 207);
             cnpTB.Name = "cnpTB";
-            cnpTB.Size = new Size(125, 27);
+            cnpTB.Size = new Size(192, 27);
             cnpTB.TabIndex = 21;
             cnpTB.TextChanged += cnpTB_TextChanged;
             // 
             // sexMCB
             // 
             sexMCB.AutoSize = true;
-            sexMCB.Location = new Point(460, 414);
+            sexMCB.Location = new Point(690, 415);
             sexMCB.Name = "sexMCB";
             sexMCB.Size = new Size(89, 24);
             sexMCB.TabIndex = 24;
@@ -254,7 +254,7 @@
             // sexFCB
             // 
             sexFCB.AutoSize = true;
-            sexFCB.Location = new Point(567, 414);
+            sexFCB.Location = new Point(799, 415);
             sexFCB.Name = "sexFCB";
             sexFCB.Size = new Size(83, 24);
             sexFCB.TabIndex = 25;
@@ -264,7 +264,7 @@
             // 
             // dateOfBirthDTP
             // 
-            dateOfBirthDTP.Location = new Point(458, 448);
+            dateOfBirthDTP.Location = new Point(690, 449);
             dateOfBirthDTP.Name = "dateOfBirthDTP";
             dateOfBirthDTP.Size = new Size(192, 27);
             dateOfBirthDTP.TabIndex = 26;

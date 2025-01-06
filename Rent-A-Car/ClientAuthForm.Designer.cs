@@ -48,7 +48,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(602, 115);
+            label1.Location = new Point(540, 298);
             label1.Name = "label1";
             label1.Size = new Size(112, 20);
             label1.TabIndex = 0;
@@ -57,7 +57,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(602, 166);
+            label2.Location = new Point(602, 340);
             label2.Name = "label2";
             label2.Size = new Size(50, 20);
             label2.TabIndex = 1;
@@ -65,14 +65,14 @@
             // 
             // usernameTB
             // 
-            usernameTB.Location = new Point(312, 108);
+            usernameTB.Location = new Point(658, 295);
             usernameTB.Name = "usernameTB";
             usernameTB.Size = new Size(125, 27);
             usernameTB.TabIndex = 2;
             // 
             // passwordTB
             // 
-            passwordTB.Location = new Point(312, 159);
+            passwordTB.Location = new Point(658, 337);
             passwordTB.Name = "passwordTB";
             passwordTB.Size = new Size(125, 27);
             passwordTB.TabIndex = 3;
@@ -80,7 +80,7 @@
             // signUpLabel
             // 
             signUpLabel.AutoSize = true;
-            signUpLabel.Location = new Point(312, 268);
+            signUpLabel.Location = new Point(658, 465);
             signUpLabel.Name = "signUpLabel";
             signUpLabel.Size = new Size(113, 20);
             signUpLabel.TabIndex = 4;
@@ -89,9 +89,9 @@
             // 
             // logInBtn
             // 
-            logInBtn.Location = new Point(312, 217);
+            logInBtn.Location = new Point(658, 410);
             logInBtn.Name = "logInBtn";
-            logInBtn.Size = new Size(125, 29);
+            logInBtn.Size = new Size(125, 30);
             logInBtn.TabIndex = 5;
             logInBtn.Text = "Conecteaza-te";
             logInBtn.UseVisualStyleBackColor = true;

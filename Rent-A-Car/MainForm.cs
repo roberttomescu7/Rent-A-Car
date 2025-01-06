@@ -19,7 +19,7 @@ namespace Rent_A_Car
             InitializeComponent();
         }
 
-        public static SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-SR874JP\SQLEXPRESS;Initial Catalog=RentACar;Integrated Security=True");
+        public static SqlConnection Conn = new SqlConnection(@"Data Source=DESKTOP-SR874JP\SQLEXPRESS;Initial Catalog=RentACar;Integrated Security=True");
 
         public static string ComputeSha256Hash(string rawData)
         {

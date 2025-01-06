@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +15,7 @@ namespace Rent_A_Car
 {
     public partial class ClientAuthForm : MainForm
     {
+        private static int clientID;
         private Form _backForm;
 
         public ClientAuthForm(Form backForm)
@@ -36,26 +38,27 @@ namespace Rent_A_Car
 
             try
             {
-                String querry = "SELECT * FROM Clienti " +
-                            "WHERE Username = '" + username + "' AND Password = '" + password + "';";
+                String querry = @"SELECT ClientID FROM Clienti
+                                  WHERE Username = '" + username + "' AND Password = '" + password + "';";
 
-                SqlDataAdapter adapter = new SqlDataAdapter(querry, MainForm.conn);
+                SqlDataAdapter adapter = new SqlDataAdapter(querry, MainForm.Conn);
                 DataTable result = new DataTable();
                 adapter.Fill(result);
 
-                if (result.Rows.Count > 0)
+                if (result.Rows.Count == 1)
                 {
-                    ClientInterfaceForm userInterfacePage = new ClientInterfaceForm();
+                    SessionData.ClientId = (int)result.Rows[0][0];
+                    ClientInterfaceForm userInterfacePage = new ClientInterfaceForm(this);
                     userInterfacePage.Show();
-                    this.Close();
+                    this.Hide();
                 }
                 else
                 {
                     MessageBox.Show("Incorrect username or password", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    usernameTB.Clear();
-                    passwordTB.Clear();
-                    usernameTB.Focus();
                 }
+                usernameTB.Clear();
+                passwordTB.Clear();
+                usernameTB.Focus();
             }
             catch
             {
