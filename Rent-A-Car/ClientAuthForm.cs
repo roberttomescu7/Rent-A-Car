@@ -39,7 +39,7 @@ namespace Rent_A_Car
                 String querry = "SELECT * FROM Clienti " +
                             "WHERE Username = '" + username + "' AND Password = '" + password + "';";
 
-                SqlDataAdapter adapter = new SqlDataAdapter(querry, MainForm.conn);
+                SqlDataAdapter adapter = new SqlDataAdapter(querry, MainForm.Conn);
                 DataTable result = new DataTable();
                 adapter.Fill(result);
 

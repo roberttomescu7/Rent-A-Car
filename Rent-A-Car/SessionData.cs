@@ -8,6 +8,8 @@ namespace Rent_A_Car
 {
     public static class SessionData
     {
-        public static int ClientId { get; set; }
+        public static int UserID { get; set; }
+        public static bool IsAdmin { get; set; }
+        public static string UserFullName { get; set;}
     }
 }

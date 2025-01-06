@@ -48,7 +48,7 @@ namespace Rent_A_Car
                          "(Nume, Prenume, CNP, Strada, Numar, Oras, Judet, Sex, DataNasterii, Username, Password) " +
                          "VALUES (@LastName, @FirstName, @CNP, @Street, @Number, @City, @County, @Sex, @DateOfBirth, @Username, @Password)";
 
-                        using (SqlCommand command = new SqlCommand(query, MainForm.conn))
+                        using (SqlCommand command = new SqlCommand(query, MainForm.Conn))
                         {
                             command.Parameters.AddWithValue("@LastName", lastNameTB.Text);
                             command.Parameters.AddWithValue("@FirstName", firstNameTB.Text);
@@ -68,9 +68,9 @@ namespace Rent_A_Car
                             command.Parameters.AddWithValue("@Username", usernameTB.Text);
                             command.Parameters.AddWithValue("@Password", hashedPassword);
 
-                            if (MainForm.conn.State != System.Data.ConnectionState.Open)
+                            if (MainForm.Conn.State != System.Data.ConnectionState.Open)
                             {
-                                MainForm.conn.Open();
+                                MainForm.Conn.Open();
                             }
 
                             int rowsAffected = command.ExecuteNonQuery();
@@ -157,11 +157,11 @@ namespace Rent_A_Car
 
             String querry1 = "SELECT * FROM Clienti " +
                             "WHERE CNP = '" + cnpTB.Text + "';";
-            SqlDataAdapter adapter1 = new SqlDataAdapter(querry1, MainForm.conn);
+            SqlDataAdapter adapter1 = new SqlDataAdapter(querry1, MainForm.Conn);
 
             String querry2 = "SELECT * FROM Clienti " +
                             "WHERE Username = '" + usernameTB.Text + "';";
-            SqlDataAdapter adapter2 = new SqlDataAdapter(querry2, MainForm.conn);
+            SqlDataAdapter adapter2 = new SqlDataAdapter(querry2, MainForm.Conn);
 
             adapter1.Fill(dt);
             if (dt.Rows.Count > 0)

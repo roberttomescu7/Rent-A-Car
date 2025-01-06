@@ -27,5 +27,14 @@ namespace Rent_A_Car
             this.branch = branch;
             this.employeeName = employeeName;
         }
+
+        public ContractInfo(string contractStartDate, string contractEndDate, string price, string deposit, int contractNumer)
+        {
+            this.contractStartDate= contractStartDate;
+            this.contractEndDate= contractEndDate;
+            this.price = price;
+            this.deposit = deposit;
+            this.contractNumber = contractNumer;
+        }
     }
 }

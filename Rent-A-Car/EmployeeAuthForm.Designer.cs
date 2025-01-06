@@ -46,9 +46,9 @@
             // 
             // logInBtn
             // 
-            logInBtn.Location = new Point(364, 203);
+            logInBtn.Location = new Point(596, 368);
             logInBtn.Name = "logInBtn";
-            logInBtn.Size = new Size(125, 29);
+            logInBtn.Size = new Size(266, 29);
             logInBtn.TabIndex = 10;
             logInBtn.Text = "Conecteaza-te";
             logInBtn.UseVisualStyleBackColor = true;
@@ -56,22 +56,22 @@
             // 
             // passwordTB
             // 
-            passwordTB.Location = new Point(364, 145);
+            passwordTB.Location = new Point(660, 273);
             passwordTB.Name = "passwordTB";
-            passwordTB.Size = new Size(125, 27);
+            passwordTB.Size = new Size(266, 27);
             passwordTB.TabIndex = 9;
             // 
             // usernameTB
             // 
-            usernameTB.Location = new Point(364, 94);
+            usernameTB.Location = new Point(660, 222);
             usernameTB.Name = "usernameTB";
-            usernameTB.Size = new Size(125, 27);
+            usernameTB.Size = new Size(266, 27);
             usernameTB.TabIndex = 8;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(246, 148);
+            label2.Location = new Point(542, 276);
             label2.Name = "label2";
             label2.Size = new Size(50, 20);
             label2.TabIndex = 7;
@@ -80,7 +80,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(246, 97);
+            label1.Location = new Point(542, 225);
             label1.Name = "label1";
             label1.Size = new Size(112, 20);
             label1.TabIndex = 6;
