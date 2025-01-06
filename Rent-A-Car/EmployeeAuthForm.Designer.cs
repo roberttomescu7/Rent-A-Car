@@ -45,44 +45,45 @@
             // 
             // logInBTN
             // 
-            logInBTN.Location = new Point(597, 420);
-            logInBTN.Name = "logInBTN";
-            logInBTN.Size = new Size(125, 30);
-            logInBTN.TabIndex = 16;
-            logInBTN.Text = "Conecteaza-te";
-            logInBTN.UseVisualStyleBackColor = true;
+            logInBtn.Location = new Point(596, 368);
+            logInBtn.Name = "logInBtn";
+            logInBtn.Size = new Size(266, 29);
+            logInBtn.TabIndex = 10;
+            logInBtn.Text = "Conecteaza-te";
+            logInBtn.UseVisualStyleBackColor = true;
+            logInBtn.Click += logInBtn_Click;
             // 
             // passwordTB
             // 
-            passwordTB.Location = new Point(597, 347);
+            passwordTB.Location = new Point(660, 273);
             passwordTB.Name = "passwordTB";
-            passwordTB.Size = new Size(125, 27);
-            passwordTB.TabIndex = 14;
+            passwordTB.Size = new Size(266, 27);
+            passwordTB.TabIndex = 9;
             // 
             // usernameTB
             // 
-            usernameTB.Location = new Point(597, 305);
+            usernameTB.Location = new Point(660, 222);
             usernameTB.Name = "usernameTB";
-            usernameTB.Size = new Size(125, 27);
-            usernameTB.TabIndex = 13;
+            usernameTB.Size = new Size(266, 27);
+            usernameTB.TabIndex = 8;
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(541, 350);
-            label3.Name = "label3";
-            label3.Size = new Size(50, 20);
-            label3.TabIndex = 12;
-            label3.Text = "Parola";
+            label2.AutoSize = true;
+            label2.Location = new Point(542, 276);
+            label2.Name = "label2";
+            label2.Size = new Size(50, 20);
+            label2.TabIndex = 7;
+            label2.Text = "Parola";
             // 
             // label4
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(479, 308);
-            label4.Name = "label4";
-            label4.Size = new Size(112, 20);
-            label4.TabIndex = 11;
-            label4.Text = "Nume utilizator";
+            label1.AutoSize = true;
+            label1.Location = new Point(542, 225);
+            label1.Name = "label1";
+            label1.Size = new Size(112, 20);
+            label1.TabIndex = 6;
+            label1.Text = "Nume utilizator";
             // 
             // EmployeeAuthForm
             // 

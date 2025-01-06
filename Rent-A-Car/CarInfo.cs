@@ -15,6 +15,7 @@ namespace Rent_A_Car
         public string type;
         public int pricePerDay;
         public int branchId;
+        public string numberPlate;
 
         public CarInfo(int id, string brand, string model, string year, string type, int pricePerDay, int branchId)
         {
@@ -33,6 +34,16 @@ namespace Rent_A_Car
             this.model = model;
             this.year = year;
             this.type = type;
+        }
+
+        public CarInfo(string brand, string model, string year, string type, int pricePerDay, string numberPlate)
+        {
+            this.brand = brand;
+            this.model = model;
+            this.year = year;
+            this.type = type;
+            this.pricePerDay = pricePerDay;
+            this.numberPlate = numberPlate;
         }
     }
 }

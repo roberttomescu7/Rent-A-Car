@@ -24,11 +24,11 @@ namespace Rent_A_Car
         private void logInBtn_Click(object sender, EventArgs e)
         {
             String username = usernameTB.Text;
-            String password = MainForm.ComputeSha256Hash(passwordTB.Text).Substring(0, 50);
+            String password = MainForm.ComputeSha256Hash(passwordTB.Text);
 
             try
             {
-                String querry = "SELECT * FROM Angajati " +
+                String querry = "SELECT AngajatID, SupervizorID, Nume + ' ' + Prenume FROM Angajati " +
                             "WHERE Username = '" + username + "' AND Password = '" + password + "';";
 
                 SqlDataAdapter adapter = new SqlDataAdapter(querry, MainForm.Conn);
@@ -37,9 +37,13 @@ namespace Rent_A_Car
 
                 if (result.Rows.Count > 0)
                 {
-                    ClientInterfaceForm userInterfacePage = new ClientInterfaceForm(this);
-                    userInterfacePage.Show();
-                    this.Close();
+                    SessionData.UserID = (int)result.Rows[0][0];
+                    SessionData.IsAdmin = (result.Rows[0][1] == DBNull.Value) ? true : false;
+                    SessionData.UserFullName = result.Rows[0][2].ToString(); 
+
+                    EmployeeInterfaceForm emplyeeInterfacePage = new EmployeeInterfaceForm(this);
+                    emplyeeInterfacePage.Show();
+                    this.Hide();
                 }
                 else
                 {
@@ -48,6 +52,9 @@ namespace Rent_A_Car
                     passwordTB.Clear();
                     usernameTB.Focus();
                 }
+                usernameTB.Clear();
+                passwordTB.Clear();
+                usernameTB.Focus();
             }
             catch
             {
