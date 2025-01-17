@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             panel3 = new Panel();
             bookings_uc = new Bookings_UC();
             appointment_uc = new Appointment_UC();
@@ -54,15 +53,6 @@
             backBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(201, 239, 240);
             backBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(201, 239, 240);
             backBtn.Click += backBtn_Click;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(1200, 800);
-            label1.Name = "label1";
-            label1.Size = new Size(50, 20);
-            label1.TabIndex = 1;
-            label1.Text = "label1";
             // 
             // panel3
             // 
@@ -143,11 +133,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1200, 800);
             Controls.Add(panel3);
-            Controls.Add(label1);
             Name = "ClientInterfaceForm";
             Text = "UserInterfaceForm";
             Controls.SetChildIndex(panel2, 0);
-            Controls.SetChildIndex(label1, 0);
             Controls.SetChildIndex(panel3, 0);
             panel2.ResumeLayout(false);
             panel3.ResumeLayout(false);
@@ -157,7 +145,6 @@
 
         #endregion
 
-        private Label label1;
         private Panel panel3;
         private AppointmentAvailable_UC appointmentAvailable_uc;
         private Button appointmentBTN;

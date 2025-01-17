@@ -29,7 +29,10 @@ namespace Rent_A_Car
                 carsAndContractsListCB.Items.Clear();
                 carsAndContracts.Clear();
                 addCarsInList();
-                carsAndContractsListCB.Text = carsAndContractsListCB.Items[0].ToString();
+                if (carsAndContractsListCB.Items.Count > 0)
+                {
+                    carsAndContractsListCB.Text = carsAndContractsListCB.Items[0].ToString();
+                }
             }
         }
 
@@ -42,7 +45,7 @@ namespace Rent_A_Car
                                         FROM Contracte AS C JOIN Vehicule AS V ON C.VehiculID = V.VehiculID
                                                             JOIN Sucursale AS S ON C.SucursalaID = S.SucursalaID
                                                             LEFT JOIN Angajati AS A ON C.AngajatID = A.AngajatID 
-                                        WHERE C.ClientID = " + SessionData.ClientId + ";";
+                                        WHERE C.ClientID = " + SessionData.UserID + ";";
 
                 if (MainForm.Conn.State != ConnectionState.Open)
                 {

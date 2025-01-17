@@ -42,16 +42,17 @@
             backBtn.FlatAppearance.MouseDownBackColor = Color.FromArgb(201, 239, 240);
             backBtn.FlatAppearance.MouseOverBackColor = Color.FromArgb(201, 239, 240);
             backBtn.Location = new Point(0, 700);
+            backBtn.Click += backBtn_Click;
             // 
             // logInBTN
             // 
-            logInBtn.Location = new Point(596, 368);
-            logInBtn.Name = "logInBtn";
-            logInBtn.Size = new Size(266, 29);
-            logInBtn.TabIndex = 10;
-            logInBtn.Text = "Conecteaza-te";
-            logInBtn.UseVisualStyleBackColor = true;
-            logInBtn.Click += logInBtn_Click;
+            logInBTN.Location = new Point(596, 368);
+            logInBTN.Name = "logInBTN";
+            logInBTN.Size = new Size(266, 29);
+            logInBTN.TabIndex = 10;
+            logInBTN.Text = "Conecteaza-te";
+            logInBTN.UseVisualStyleBackColor = true;
+            logInBTN.Click += logInBtn_Click;
             // 
             // passwordTB
             // 
@@ -69,21 +70,21 @@
             // 
             // label3
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(542, 276);
-            label2.Name = "label2";
-            label2.Size = new Size(50, 20);
-            label2.TabIndex = 7;
-            label2.Text = "Parola";
+            label3.AutoSize = true;
+            label3.Location = new Point(542, 276);
+            label3.Name = "label3";
+            label3.Size = new Size(50, 20);
+            label3.TabIndex = 7;
+            label3.Text = "Parola";
             // 
             // label4
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(542, 225);
-            label1.Name = "label1";
-            label1.Size = new Size(112, 20);
-            label1.TabIndex = 6;
-            label1.Text = "Nume utilizator";
+            label4.AutoSize = true;
+            label4.Location = new Point(542, 225);
+            label4.Name = "label4";
+            label4.Size = new Size(112, 20);
+            label4.TabIndex = 6;
+            label4.Text = "Nume utilizator";
             // 
             // EmployeeAuthForm
             // 

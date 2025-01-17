@@ -301,7 +301,7 @@ namespace Rent_A_Car
             {
                 string licensePlate = endingContractsDGV.Rows[e.RowIndex].Cells["numberPlateEnd"].Value.ToString();
 
-                if (startingContracts.TryGetValue(licensePlate, out (CarInfo Car, ContractInfo Contract, ClientInfo Client) info))
+                if (endingContracts.TryGetValue(licensePlate, out (CarInfo Car, ContractInfo Contract, ClientInfo Client) info))
                 {
                     HitedCar_UC hitedCar_UC = new HitedCar_UC(info.Car.numberPlate, info.Contract.contractNumber);
 

@@ -20,6 +20,7 @@ namespace Rent_A_Car
         {
             InitializeComponent();
             SetupCommunication();
+            backBtn.Text = "Logout";
             _backForm = backForm;
 
             _userControls.Add(appointmentAvailable_uc);
@@ -48,7 +49,7 @@ namespace Rent_A_Car
         {
             _backForm.Show();
             this.Close();
-            SessionData.ClientId = 0;
+            SessionData.UserID = 0;
         }
 
         public static void ShowUC(String ucName)

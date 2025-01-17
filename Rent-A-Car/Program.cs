@@ -4,13 +4,11 @@ namespace Rent_A_Car
 {
     internal static class Program
     {
-        /// <summary>
-        ///  The main entry point for the application.
-        /// </summary>
+
         [STAThread]
         static void Main()
         {
-            AllocConsole();
+            //AllocConsole();
             ApplicationConfiguration.Initialize();
             Application.Run(new MainMenuForm());
         }

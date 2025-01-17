@@ -2,3 +2,5 @@
 /Rent-A-Car/obj
 /Rent-A-Car/bin
 /*/*.csproj.user
+*.pdf
+*.txt

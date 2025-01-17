@@ -119,7 +119,7 @@
             label1.Name = "label1";
             label1.Size = new Size(219, 28);
             label1.TabIndex = 1;
-            label1.Text = "Contracte care incep azi";
+            label1.Text = "Contracte care încep azi";
             // 
             // label2
             // 
@@ -129,9 +129,9 @@
             label2.Location = new Point(25, 387);
             label2.Margin = new Padding(0);
             label2.Name = "label2";
-            label2.Size = new Size(219, 28);
+            label2.Size = new Size(262, 28);
             label2.TabIndex = 3;
-            label2.Text = "Contracte care incep azi";
+            label2.Text = "Contracte care se termină azi";
             // 
             // endingContractsDGV
             // 

@@ -28,7 +28,7 @@ namespace Rent_A_Car
 
             try
             {
-                String querry = "SELECT AngajatID, SupervizorID, Nume + ' ' + Prenume FROM Angajati " +
+                String querry = "SELECT AngajatID, SupervizorID, Nume + ' ' + Prenume, SucursalaID FROM Angajati " +
                             "WHERE Username = '" + username + "' AND Password = '" + password + "';";
 
                 SqlDataAdapter adapter = new SqlDataAdapter(querry, MainForm.Conn);
@@ -39,7 +39,8 @@ namespace Rent_A_Car
                 {
                     SessionData.UserID = (int)result.Rows[0][0];
                     SessionData.IsAdmin = (result.Rows[0][1] == DBNull.Value) ? true : false;
-                    SessionData.UserFullName = result.Rows[0][2].ToString(); 
+                    SessionData.UserFullName = result.Rows[0][2].ToString();
+                    SessionData.branchID = int.Parse(result.Rows[0][3].ToString());
 
                     EmployeeInterfaceForm emplyeeInterfacePage = new EmployeeInterfaceForm(this);
                     emplyeeInterfacePage.Show();
@@ -60,6 +61,12 @@ namespace Rent_A_Car
             {
                 MessageBox.Show("Inaccesible database", "ERROR");
             }
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            _backForm.Show();
+            this.Close();
         }
     }
 }

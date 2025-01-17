@@ -36,12 +36,12 @@ namespace Rent_A_Car
 	                                    AND V.SucursalaID = (SELECT S.SucursalaID FROM Sucursale AS S 
 						                                     WHERE S.Oras = '" + city + @"')
 	                                    AND V.VehiculID NOT IN (SELECT C.VehiculID FROM Contracte AS C 
-							                                    WHERE (C.DataIncepere <= '" + contractStartDate + @"' 
+							                                    WHERE ((C.DataIncepere <= '" + contractStartDate + @"' 
 							                                    AND C.DataIncheiere >= '" + contractStartDate + @"')
                                                                 OR (C.DataIncepere <= '" + contractEndDate + @"' 
 							                                    AND C.DataIncheiere >= '" + contractEndDate + @"')
                                                                 OR (C.DataIncepere >= '" + contractStartDate + @"' 
-							                                    AND C.DataIncheiere <= '" + contractEndDate + @"')
+							                                    AND C.DataIncheiere <= '" + contractEndDate + @"'))
 							                                    AND C.isValid = 'True');";
 
                 if (MainForm.Conn.State != ConnectionState.Open)
@@ -95,7 +95,10 @@ namespace Rent_A_Car
                 cars.Clear();
                 carsListCB.Items.Clear();
                 addCarsInList();
-                carsListCB.Text = carsListCB.Items[0].ToString();
+                if (carsListCB.Items.Count > 0)
+                {
+                    carsListCB.Text = carsListCB.Items[0].ToString();
+                }
             }
         }
 
@@ -136,7 +139,7 @@ namespace Rent_A_Car
                     command.Parameters.AddWithValue("@Garantie", 1000);
                     command.Parameters.AddWithValue("@isValid", "True");
                     command.Parameters.AddWithValue("@SucursalaID", selectedCar.branchId);
-                    command.Parameters.AddWithValue("@ClientID", SessionData.ClientId);
+                    command.Parameters.AddWithValue("@ClientID", SessionData.UserID);
 
                     if (MainForm.Conn.State != System.Data.ConnectionState.Open)
                     {

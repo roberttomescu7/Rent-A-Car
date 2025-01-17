@@ -73,7 +73,8 @@ namespace Rent_A_Car
                 if (!string.IsNullOrEmpty(damageType) && !string.IsNullOrEmpty(description))
                 {
 
-                    string insertDamageQuery = "INSERT INTO Daune (TipDaunaID, ContractID, Descriere) OUTPUT INSERTED.DaunaID VALUES (@TipDaunaID, @ContractID, @Descriere)";
+                    string insertDamageQuery = @"INSERT INTO Daune (TipDaunaID, ContractID, Descriere) 
+                                                 OUTPUT INSERTED.DaunaID VALUES (@TipDaunaID, @ContractID, @Descriere)";
 
                     using (SqlCommand cmd = new SqlCommand(insertDamageQuery, MainForm.Conn))
                     {

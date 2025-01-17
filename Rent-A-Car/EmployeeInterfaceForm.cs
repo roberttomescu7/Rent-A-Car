@@ -17,8 +17,15 @@ namespace Rent_A_Car
         {
             _backForm = backForm;
             backBtn.Text = "Logout";
+
             InitializeComponent();
+
+            if (SessionData.IsAdmin == false)
+            {
+                statisticsBTN.Hide();
+            }
             pendingContracts_uc.Hide();
+            statistics_uc.Hide();
 
         }
 
@@ -32,7 +39,14 @@ namespace Rent_A_Car
 
         private void todayContractsBTN_Click(object sender, EventArgs e)
         {
+            statistics_uc.Hide();
             pendingContracts_uc.Show();
+        }
+
+        private void statisticsBTN_Click(object sender, EventArgs e)
+        {
+            pendingContracts_uc.Hide();
+            statistics_uc.Show();
         }
     }
 }

@@ -43,12 +43,12 @@ namespace Rent_A_Car
 	                                   AND V.SucursalaID = (SELECT S.SucursalaID FROM Sucursale AS S 
 						                                    WHERE S.Oras = '" + city + @"')
 	                                   AND V.VehiculID NOT IN (SELECT C.VehiculID FROM Contracte AS C 
-							                                   WHERE (C.DataIncepere <= '" + contractStartDate + @"' 
+							                                   WHERE ((C.DataIncepere <= '" + contractStartDate + @"' 
 							                                   AND C.DataIncheiere >= '" + contractStartDate + @"')
                                                                OR (C.DataIncepere <= '" + contractEndDate + @"' 
 							                                   AND C.DataIncheiere >= '" + contractEndDate + @"')
                                                                OR (C.DataIncepere >= '" + contractStartDate + @"' 
-							                                   AND C.DataIncheiere <= '" + contractEndDate + @"')
+							                                   AND C.DataIncheiere <= '" + contractEndDate + @"'))
 							                                   AND C.isValid = 'True');";
 
                 using (SqlCommand command = new SqlCommand(verifyQuery, MainForm.Conn))

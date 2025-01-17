@@ -47,7 +47,7 @@ namespace Rent_A_Car
 
                 if (result.Rows.Count == 1)
                 {
-                    SessionData.ClientId = (int)result.Rows[0][0];
+                    SessionData.UserID = (int)result.Rows[0][0];
                     ClientInterfaceForm userInterfacePage = new ClientInterfaceForm(this);
                     userInterfacePage.Show();
                     this.Hide();

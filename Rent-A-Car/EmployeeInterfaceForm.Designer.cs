@@ -32,15 +32,19 @@
             label1 = new Label();
             panel3 = new Panel();
             todayContractsBTN = new Button();
+            statisticsBTN = new Button();
+            statistics_uc = new Statistics_UC();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             SuspendLayout();
             // 
             // panel2
             // 
+            panel2.Controls.Add(statisticsBTN);
             panel2.Controls.Add(todayContractsBTN);
             panel2.Controls.SetChildIndex(backBtn, 0);
             panel2.Controls.SetChildIndex(todayContractsBTN, 0);
+            panel2.Controls.SetChildIndex(statisticsBTN, 0);
             // 
             // backBtn
             // 
@@ -73,6 +77,7 @@
             // 
             // panel3
             // 
+            panel3.Controls.Add(statistics_uc);
             panel3.Controls.Add(pendingContracts_uc);
             panel3.Controls.Add(label1);
             panel3.Dock = DockStyle.Fill;
@@ -100,6 +105,33 @@
             todayContractsBTN.UseVisualStyleBackColor = false;
             todayContractsBTN.Click += todayContractsBTN_Click;
             // 
+            // statisticsBTN
+            // 
+            statisticsBTN.BackColor = Color.FromArgb(74, 202, 205);
+            statisticsBTN.FlatAppearance.BorderColor = Color.FromArgb(74, 202, 205);
+            statisticsBTN.FlatAppearance.BorderSize = 0;
+            statisticsBTN.FlatAppearance.MouseDownBackColor = Color.FromArgb(201, 239, 240);
+            statisticsBTN.FlatAppearance.MouseOverBackColor = Color.FromArgb(201, 239, 240);
+            statisticsBTN.FlatStyle = FlatStyle.Flat;
+            statisticsBTN.Font = new Font("Impact", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            statisticsBTN.Location = new Point(0, 50);
+            statisticsBTN.Margin = new Padding(0);
+            statisticsBTN.Name = "statisticsBTN";
+            statisticsBTN.Size = new Size(250, 50);
+            statisticsBTN.TabIndex = 9;
+            statisticsBTN.Text = "Statistici";
+            statisticsBTN.UseVisualStyleBackColor = false;
+            statisticsBTN.Click += statisticsBTN_Click;
+            // 
+            // statistics_uc1
+            // 
+            statistics_uc.Dock = DockStyle.Fill;
+            statistics_uc.Location = new Point(0, 0);
+            statistics_uc.Margin = new Padding(0);
+            statistics_uc.Name = "statistics_uc1";
+            statistics_uc.Size = new Size(950, 750);
+            statistics_uc.TabIndex = 5;
+            // 
             // EmployeeInterfaceForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -122,5 +154,7 @@
         private Label label1;
         private Panel panel3;
         private Button todayContractsBTN;
+        private Button statisticsBTN;
+        private Statistics_UC statistics_uc;
     }
 }
